@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="name-dialog" class="name-dialog active">
+        <h2>Welcome to Number Guessing Game</h2>
+        <div class="input-container">
+            <input type="text" id="name-input" placeholder="Enter your name" maxlength="20">
+            <button id="join-game">Join Game</button>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div id="player-view" class="view">
+            <h2>You are guessing now</h2>
+            <div class="personal-numbers">
+                Your numbers: 
+                <div class="numbers-container">
+                    <span class="number">-</span>
+                    <span class="number">-</span>
+                    <span class="number">-</span>
+                    <span class="number">-</span>
+                    <span class="number">-</span>
+                </div>
+            </div>
+            <div id="player-feedback" class="feedback"></div>
+            <div class="input-container">
+                <input type="number" id="guess-input" placeholder="Enter your guess">
+                <button id="submit-guess">Submit</button>
+                <button id="end-game" class="end-game-btn">End Game</button>
+            </div>
+        </div>
+
+        <div id="spectator-view" class="view">
+            <h2>Player <span id="current-player">1</span> is guessing...</h2>
+            <div class="personal-numbers">
+                Your numbers: 
+                <div class="numbers-container">
+                    <span class="number">-</span>
+                    <span class="number">-</span>
+                    <span class="number">-</span>
+                    <span class="number">-</span>
+                    <span class="number">-</span>
+                </div>
+            </div>
+            <div id="spectator-feedback" class="feedback"></div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
