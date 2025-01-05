@@ -104,8 +104,8 @@ wss.on('connection', (ws) => {
             }
 
             const guess = parseInt(data.guess);
-            const filanQeder = guess/10;
-            const filanZer = guess%4;
+            const filanQeder = Math.floor(guess / 10);
+            const filanZer = guess%10;
             let feedback;
             const currentPlayer = gameState.players.get(ws);
             
