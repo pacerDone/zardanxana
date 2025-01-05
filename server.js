@@ -104,6 +104,8 @@ wss.on('connection', (ws) => {
             }
 
             const guess = parseInt(data.guess);
+            const filanQeder = guess/10;
+            const filanZer = guess%4;
             let feedback;
             const currentPlayer = gameState.players.get(ws);
             
@@ -126,8 +128,8 @@ wss.on('connection', (ws) => {
                 feedback = {
                     type: 'feedback',
                     message: `${currentPlayer.name}'s deyir ki, elinde "${filanQeder}" dene "${filanZer}" var`,
-                    filanQeder: guess/10,
-                    filanZer: guess%10,
+                    filanQeder: filanQeder,
+                    filanZer: filanZer,
                     direction: direction,
                     currentPlayer: nextPlayer.id,
                     currentPlayerName: nextPlayer.name
