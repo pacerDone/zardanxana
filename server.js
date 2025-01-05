@@ -125,8 +125,9 @@ wss.on('connection', (ws) => {
                 
                 feedback = {
                     type: 'feedback',
-                    message: `${currentPlayer.name}'s guess was "${guess}", go ${direction}`,
-                    guess: guess,
+                    message: `${currentPlayer.name}'s deyir ki, elinde "${filanQeder}" dene "${filanZer}" var`,
+                    filanQeder: guess/10,
+                    filanZer: guess%10,
                     direction: direction,
                     currentPlayer: nextPlayer.id,
                     currentPlayerName: nextPlayer.name
